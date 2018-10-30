@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.dridi.persistance.model.User;
 import com.dridi.persistance.repository.UserRepository;
 
 @Service("userDetailsService")
@@ -18,7 +19,8 @@ public class UserService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
-		return userRepository.findoneByUsername(username);
+		User user= userRepository.findOneByUsername(username);
+		return user;
 	}
 
 }

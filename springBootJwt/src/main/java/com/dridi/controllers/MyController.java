@@ -8,7 +8,7 @@ public class MyController {
 	
 	@RequestMapping(value="/hello")
 	public String hello() {
-		return "Hello JWt";
+		return "Hello ramzi";
 		
 	}
 
